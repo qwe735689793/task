@@ -2,14 +2,16 @@ package com.demo.entity;
 
 import lombok.Data;
 
+import java.io.Serializable;
 @Data
-public class Account {
+public class Account implements Serializable {
     private Integer id;
 
-    private String name;
+    private String studentId;
 
     private String password;
 
-    private Integer status;
+    private String name;
 
+    private Integer status;
 }

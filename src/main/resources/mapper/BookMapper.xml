@@ -11,5 +11,7 @@
     <sql id="Base_Column_List">
     id, name, Press, author, stock
   </sql>
+    <select id="">
 
+    </select>
 </mapper>

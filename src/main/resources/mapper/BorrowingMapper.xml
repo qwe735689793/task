@@ -6,8 +6,10 @@
         <result column="borrowing_time" jdbcType="TIMESTAMP" property="borrowingTime"/>
         <result column="return_time" jdbcType="TIMESTAMP" property="returnTime"/>
     </resultMap>
-    <select id="Myborrowing" parameterType="w">
-
+    <select id="Myborrowing" parameterType="java.lang.Integer" resultType="java.util.HashMap">
+      SELECT borrowing.*
+			FROM `borrowing`
+			WHERE borrowing.user_id=#{id}
     </select>
 
 </mapper>
