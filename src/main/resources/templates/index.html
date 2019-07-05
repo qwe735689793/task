@@ -1,24 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="webjars/jquery/3.3.1-2/jquery.min.js"></script>
-<script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<link href="webjars/bootstrap/4.3.1/css/bootstrap.css" rel="stylesheet"/>
-<link href="webjars/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <head>
     <meta charset="UTF-8">
     <title>index</title>
 </head>
 <body>
-<div class="" style="margin:auto;background: cadetblue">
-    <div class="">
-        <button class="btn btn-primary">button</button>
-        <button class="layui-btn layui-btn-warm layui-icon layui-icon-camera"
-                style="font-size: 30px; color: #1E9FFF;">button
-        </button>
-        <button class="btn btn-danger"><i class="fa fa-users"></i>button</button>
+<div id="content_body">
+    <div id="content_left">
+        <div id ="content_menu">
+            <div id="leader_menu">
+                <p1>菜单项 MENU      >></p1>
+            </div>
+            <div id="book_borrow">
+                <p>##图书借阅</p>
+            </div>
+            <div id="my_borrow">
+                <p1>##我的借阅</p1>
+            </div>
+        </div>
     </div>
-    <h2>111</h2>
-    <!--    <h2 th:text="${user}?${user.name}:''"></h2>-->
+
+    <div id="content_right">
+        <div id="top_name">
+            <p1>图书借阅</p1>
+        </div>
+        <div id="primary_fence">
+            <div id="select_fence">
+                <div id="select_frame">
+                    图书名称：<input type="text" class="form-control">
+                </div>
+                <div id="select_btn">
+                    <button type="button" class="btn btn-primary">查询</button>
+                </div>
+            </div>
+            <div id="form_fence">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>图书名称</th>
+                        <th>出版社</th>
+                        <th>作者</th>
+                        <th>库存</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>面向对象的分析与设计</td>
+                        <td>科学出版社</td>
+                        <td>刘汝佳</td>
+                        <td>13</td>
+                        <td>借阅</td>
+                    </tr>
+                    <tr>
+                        <td>面向对象的分析与设计</td>
+                        <td>科学出版社</td>
+                        <td>刘汝佳</td>
+                        <td>13</td>
+                        <td>借阅</td>
+                    </tr><tr>
+                        <td>面向对象的分析与设计</td>
+                        <td>科学出版社</td>
+                        <td>刘汝佳</td>
+                        <td>13</td>
+                        <td>借阅</td>
+                    </tr><tr>
+                        <td>面向对象的分析与设计</td>
+                        <td>科学出版社</td>
+                        <td>刘汝佳</td>
+                        <td>13</td>
+                        <td>借阅</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="page_fence">
+                <ul class="pagination">
+                    <li><a href="#">&laquo;</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
+<style type="text/css">　
+#content_body
+{
+    height:100%;
+    width: 100%;
+}
+#top_name
+{
+    padding: 12px;
+    width: 1550px;
+    height: 50px;
+    background-color: #F7F7F7;
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-color: #F7F7F7;
+}
+#content_left
+{
+    display: inline-block;
+    height: 700px;
+    width:150px;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E6E6E6;
+}
+#content_menu
+{
+    width: 100%;
+    height: 300px;
+    background-color: white;
+}
+#leader_menu
+{
+    font-weight: bold;
+    padding: 12px;
+    width: 100%;
+    height: 50px;
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-color: #F7F7F7;
+    background-color:#F7F7F7;
+}
+p1{
+    color:#777777;
+}
+#book_borrow
+{
+    padding: 12px;
+    width: 100%;
+    height: 50px;
+    background-color:#4469FF;
+}
+p{
+    color:white;
+}
+#my_borrow
+{
+    padding: 12px;
+    width: 100%;
+    height: 50px;
+    background-color:white;
+}
+#content_right
+{
+    vertical-align: top;
+    display: inline-block;
+    width: 1350px;
+    height: 700px;
+    background-color: white;
+}
+#primary_fence
+{
+    padding: 20px;
+    width:1300px;
+    height: 600px;
+    background-color: white;
+}
+#select_fence
+{
+    width:500px;
+    height: 50px;
+    background-color: white;
+}
+#select_frame
+{
+    display: inline-block;
+    padding: 10px;
+    width: 300px;
+    height: 80%;
+    background-color: white;
+}
+#select_btn{
+    margin-top: 5px;
+    vertical-align: top;
+    display: inline-block;
+    height: 80%;
+    width: 50px;
+    background-color: white;
+}
+#form_fence{
+    height: 400px;
+    width: 1250px;
+    background-color: white;
+}
+#page_fence{
+    margin-left: 1000px;
+    height: 30px;
+    width: 450px;
+    background-color: white;
+}
+.form-control{
+    display: inline-block;
+    width: 200px;
+    height: 20px;
+}
+</style>
 </body>
 </html>

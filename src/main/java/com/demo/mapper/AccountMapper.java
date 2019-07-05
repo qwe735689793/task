@@ -1,9 +1,11 @@
 package com.demo.mapper;
 
 import com.demo.entity.Account;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface AccountMapper {
     int deleteByPrimaryKey(Integer id);
 

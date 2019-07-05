@@ -43,11 +43,29 @@ public class LoginController {
     @ResponseBody
     public String checkLogin(@RequestBody Map<String, Object> map) {
         String flag = "/getindex";
+        System.out.println("111" + map);
         Account newUser = new Account();
         newUser.setName(map.get("username").toString());
         newUser.setPassword(map.get("password").toString());
         Account oldUser = userService.getUserByName(newUser.getName());
         System.out.println(oldUser);
-        return flag;
+        if (map.get("username").equals(oldUser.getName()) && map.get("password").equals(oldUser.getPassword())) {
+            session.setAttribute("user", oldUser);
+            if (oldUser.getStatus() == 1)
+            {
+                return flag;
+            }
+            if (oldUser.getStatus() == 2)
+            {
+                System.out.println("=======");
+                return "administor";
+            } else
+                {
+                return "error";
+            }
+
+        }
+        return  "error";
     }
 }
+

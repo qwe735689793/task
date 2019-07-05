@@ -31,4 +31,10 @@ public class TestBootController {
         System.out.println(borrowingMapper.Myborrowing(2));
         return "index";
     }
+
+    @RequestMapping("/administor")
+    public String getAdministor(ModelMap map) {
+        System.out.println(borrowingMapper.Myborrowing(2));
+        return "administor";
+    }
 }
