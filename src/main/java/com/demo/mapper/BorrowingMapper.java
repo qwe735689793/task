@@ -5,5 +5,5 @@ import java.util.Map;
 
 public interface BorrowingMapper {
     //我的借阅
-    List<Map<String, Object>> Myborrowing(String id);
+    List<Map<String, Object>> Myborrowing(Integer id);
 }
